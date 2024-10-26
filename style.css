@@ -5,8 +5,8 @@ body {
     padding: 0;
     background-color: #f9f9f9;
     color: #333;
-    background-image: url('./agro_zoe.jfif'); /* Reemplaza con la ruta de tu imagen */
-    background-size:100% 83%; /* La imagen cubre todo el fondo */
+    background-image: url('./imgFondo/agro_zoe.jfif'); /* Reemplaza con la ruta de tu imagen */
+    background-size:100% 86%; /* La imagen cubre todo el fondo */
     background-position:center; /* Centra la imagen */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
 }
@@ -89,7 +89,61 @@ button {
 button:hover {
     background-color: #45a049;
 }
+/* Estilos para el carrusel */
+.carrusel {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    margin: auto;
+}
 
+.carrusel-imagenes {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carrusel-imagen {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.boton-carrusel {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.boton-carrusel.izquierda {
+    left: 10px;
+}
+
+.boton-carrusel.derecha {
+    right: 10px;
+}
+
+/* Estilos para las tarjetas */
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.tarjeta {
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    transition: box-shadow 0.3s;
+}
+
+.tarjeta:hover {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
 /* Pie de página */
 footer {
     text-align: center;

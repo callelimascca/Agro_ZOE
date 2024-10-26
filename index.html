@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agropecuaria Zoe</title>
     <link rel="stylesheet" href="./style.css">
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./icono/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -15,9 +15,8 @@
         <nav>
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#nosotros">Nosotros</a></li>
-                <li><a href="#productos">Productos</a></li>
-                <li><a href="#innovacion">Innovación</a></li>
+                <li><a class="nav-link" href="catalogo.html">Catálogo</a></li>
+                <li><a href="#servicios">Servicios</a></li>
                 <li><a href="#contacto">Contáctanos</a></li>
             </ul>
         </nav>
@@ -31,21 +30,36 @@
             <a href="#contacto" class="cta">Contáctanos</a>
         </section>
     
-        <section id="nosotros">
-            <h2>Nosotros</h2>
-            <p>Comprometidos con la agricultura sostenible y la innovación.</p>
+        <section id="carrusel">
+            <div class="carrusel">
+                <button class="boton-carrusel izquierda" onclick="cambiarCarrusel(-1)">&#10094;</button>
+                <div class="carrusel-imagenes">
+                    <img src="./carrimg/frutas.jpg" alt="Frutas" class="carrusel-imagen">
+                    <img src="./carrimg/verduras.jpg" alt="Verduras" class="carrusel-imagen">
+                    <img src="./carrimg/semillas.jpg" alt="Semillas" class="carrusel-imagen">
+                </div>
+                <button class="boton-carrusel derecha" onclick="cambiarCarrusel(1)">&#10095;</button>
+            </div>
         </section>
     
-        <section id="productos">
-            <h2>Productos</h2>
-            <p>Cultivos, ganadería y más.</p>
+        <section id="servicios">
+            <h2>Servicios que ofrecemos</h2>
+                <div class="tarjetas">
+                    <div class="tarjeta">
+                        <h3>Cultivo Sostenible</h3>
+                        <p>Prácticas agrícolas que respetan el medio ambiente.</p>
+                    </div>
+                    <div class="tarjeta">
+                        <h3>Distribución Eficiente</h3>
+                        <p>Logística optimizada para un mejor servicio.</p>
+                    </div>
+                    <div class="tarjeta">
+                        <h3>Asesoría Personalizada</h3>
+                        <p>Apoyo a nuestros clientes en cada paso del proceso.</p>
+                    </div>
+                </div>
+            </section>
         </section>
-    
-        <section id="innovacion">
-            <h2>Innovación</h2>
-            <p>Utilizamos tecnología avanzada para mejorar la producción.</p>
-        </section>
-    
         <section id="contacto">
             <h2>Contáctanos</h2>
             <form>
@@ -55,6 +69,7 @@
                 <button type="submit">Enviar</button>
             </form>
         </section>
+
     </main>
 
     <footer>
@@ -66,6 +81,15 @@
         </div>
         <p>&copy; 2024 AgropecuariaZoe. Todos los derechos reservados.</p>
     </footer>
+    <script>
+        let index = 0;
+        function cambiarCarrusel(n) {
+            const imagenes = document.querySelector('.carrusel-imagenes');
+            const total = document.querySelectorAll('.carrusel-imagen').length;
+            index = (index + n + total) % total;
+            imagenes.style.transform = 'translateX(' + (-index * 100) + '%)';
+        }
+    </script>
 
 </body>
 </html>

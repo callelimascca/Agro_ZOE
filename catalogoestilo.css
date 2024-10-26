@@ -1,0 +1,95 @@
+/* Estilos Generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    background-image: url('./imgFondo/agro_zoe.jfif'); /* Reemplaza con la ruta de tu imagen */
+    background-size:100% 83%; /* La imagen cubre todo el fondo */
+    background-position:center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+section {
+    width: 50%;
+    height: 50%;
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: inline;
+}
+.tarjetas {
+    background-color: #f9f9f9;
+    color: #f9f9f9;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 10px 0;
+}
+
+.tarjeta {
+    background: #f4f4f4;
+    border: 2px solid #f2f7f3;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    flex: 1 0 30%; /* tres tarjetas por fila */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+.ver-mas {
+    background: #28a745; /* Color verde */
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.ver-mas:hover {
+    background: #218838; /* Color verde más oscuro al pasar el mouse */
+}
+
+.tarjeta {
+    position: relative;
+    overflow: hidden; /* Asegura que el botón no sobresalga */
+}
+.tarjeta:hover {
+    transform: scale(1.05);
+}
+
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: #333;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
