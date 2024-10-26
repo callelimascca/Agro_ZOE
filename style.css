@@ -5,6 +5,10 @@ body {
     padding: 0;
     background-color: #f9f9f9;
     color: #333;
+    background-image: url('./agro_zoe.jfif'); /* Reemplaza con la ruta de tu imagen */
+    background-size:100% 83%; /* La imagen cubre todo el fondo */
+    background-position:center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
 }
 
 header {
@@ -13,7 +17,6 @@ header {
     padding: 20px;
     text-align: center;
 }
-
 nav ul {
     list-style: none;
     padding: 0;
@@ -97,4 +100,19 @@ footer {
     bottom: 0;
     width: 100%;
 }
+.redes-sociales {
+    margin-top: 10px;
+}
 
+.redes-sociales a {
+    font-size: 15px; /* Tamaño del icono */
+    color: white;
+    margin: 0 15px;
+    font-size: 2.5rem; /* Aumentar tamaño de iconos */
+    transition: transform 0.2s; /* Efecto de transición */
+}
+
+.redes-sociales a:hover {
+    color: #ffffff; /* Color al pasar el ratón */
+    transform: scale(1.2);
+}
